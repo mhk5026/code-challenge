@@ -1,0 +1,67 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.112.0/containers/sfdx-project
+{
+  "name": "Salesforce Project",
+  "dockerFile": "Dockerfile",
+  "mounts": [],
+  "extensions": [
+    // Salesforce specific extensions
+    "salesforce.salesforcedx-vscode",
+    "chuckjonas.apex-pmd",
+    "hugoom.sfdx-autoheader",
+    // Additional extensions
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "redhat.vscode-xml"
+  ],
+  "settings": {
+    //
+    // VSCode
+    "telemetry.enableCrashReporter": false, // Disable telemetry/reporting
+    "telemetry.enableTelemetry": false, // Disable telemetry/reporting
+    "terminal.integrated.env.linux": {
+      "SFDX_SET_CLIENT_IDS": "sfdx-vscode"
+    },
+    //
+    //
+    // Salesforce extentions configuration
+    //
+    "salesforcedx-vscode-apex.java.home": "/usr/lib/jvm/java-11-openjdk-amd64",
+    "salesforcedx-vscode-core.telemetry.enabled": false, // Disable telemetry/reporting
+    "salesforcedx-vscode-core.show-cli-success-msg": false,
+    "salesforcedx-vscode-apex.enable-semantic-errors": true,
+    "salesforcedx-vscode-apex.enable-sobject-refresh-on-startup": true,
+    //
+    // Formatting defaults configuration
+    //
+    "editor.formatOnSave": true,
+    //
+    // eslint configuration
+    //
+    "eslint.enable": true,
+    //
+    // Prettier configuration
+    //
+    "prettier.resolveGlobalModules": true,
+    //
+    // PMD configuration
+    //
+    // absolute path to where PMD was installed
+    "apexPMD.pmdBinPath": "/bin/pmd/",
+    "apexPMD.runOnFileOpen": true,
+    "apexPMD.runOnFileSave": true,
+    "apexPMD.runOnFileChange": true,
+    "apexPMD.onFileChangeDebounce": 30000,
+    "apexPMD.enableCache": true,
+    //
+    // SFDoc configuration
+    //
+    "SFDoc.EnableForApex": false,
+    "SFDoc.EnableForVisualforce": false,
+    "SFDoc.EnableForLightningMarkup": false,
+    "SFDoc.EnableForLightningJavascript": false,
+    "SFDoc.IncludParameterTypeInMethodHeader": false,
+    "SFDoc.username": "${localEnv:USERNAME}",
+    "[apexlog]": {}
+  }
+}

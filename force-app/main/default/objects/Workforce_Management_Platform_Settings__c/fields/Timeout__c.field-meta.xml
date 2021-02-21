@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Timeout__c</fullName>
+    <defaultValue>10</defaultValue>
+    <description>The timeout in seconds for each API callout request.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The timeout in seconds for each API callout request.</inlineHelpText>
+    <label>Timeout</label>
+    <precision>3</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

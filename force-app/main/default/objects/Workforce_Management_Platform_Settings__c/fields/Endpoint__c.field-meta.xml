@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Endpoint__c</fullName>
+    <description>The URL of the API endpoint used to make callouts to the Workforce Management Platform.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The URL of the API endpoint used to make callouts to the Workforce Management Platform.</inlineHelpText>
+    <label>Endpoint</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>
